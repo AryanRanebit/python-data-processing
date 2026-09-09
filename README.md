@@ -1,58 +1,30 @@
-# 📊 Day 1: Pandas Data Preprocessing, Deduplication & Normalization
+# 📊 Day 2: Noise Elimination, Feature Selection & EDA
 
 ## 📌 Problem Overview & Objective
-This project demonstrates foundational data engineering and data preprocessing techniques using **Python** and **Pandas**. In production pipelines, raw data frequently contains missing values (`NaN`), duplicate rows, and features measured across disparate scales. This assignment establishes automated routines to cleanse, deduplicate, and normalize raw tabular data.
+This assignment focuses on data cleaning and feature engineering techniques:
+1. **Noise Elimination**: Removing outliers using the Interquartile Range (IQR) method.
+2. **Feature Selection**: Identifying and eliminating constant/zero-variance features using Scikit-Learn's `VarianceThreshold`.
+3. **Exploratory Data Analysis (EDA)**: Computing statistical summaries, correlation matrices, and distribution visualizations.
 
 ---
 
-## ⚙️ Key Techniques & Mathematical Foundations
+## ⚙️ Key Concepts
 
-### 1. Missing Value Imputation
-- **Numerical Features (`Age`, `Marks`)**: Mean imputation replacing `NaN` with $\mu = \frac{1}{N}\sum_{i=1}^N x_i$.
-- **Categorical Features (`Name`)**: Constant value imputation (`'Unknown'`).
+### 1. Interquartile Range (IQR) Outlier Filtering
+$$\text{IQR} = Q_3 - Q_1$$
+$$\text{Lower Bound} = Q_1 - 1.5 \times \text{IQR}$$
+$$\text{Upper Bound} = Q_3 + 1.5 \times \text{IQR}$$
 
-### 2. Deduplication
-- Identification and removal of duplicate tuple entries using full-row hashing via `df.drop_duplicates()`.
+Records outside $[\text{Lower Bound}, \text{Upper Bound}]$ are flagged as noise/outliers and filtered out.
 
-### 3. Min-Max Feature Normalization
-Rescales features into a standard bounded range $[0, 1]$:
-
-$$X_{\text{norm}} = \frac{X - X_{\min}}{X_{\max} - X_{\min}}$$
+### 2. Variance Threshold Feature Selection
+Features with zero variance ($\text{Var}(X) = 0$) provide no explanatory value and are automatically removed from the modeling matrix.
 
 ---
 
 ## 🚀 Execution & Usage
 
-### 1. Install Dependencies
 ```bash
 pip install -r requirements.txt
+python eda_outlier_feature_selection.py
 ```
-
-### 2. Run Preprocessing Pipeline
-```bash
-python data_preprocessing.py
-```
-
----
-
-## 📈 Sample Results & Output
-
-### Original Raw Dataset
-| Name | Age | Marks |
-| :--- | :--- | :--- |
-| Amit | 22.0 | 85.0 |
-| Riya | 24.0 | 90.0 |
-| Amit | 22.0 | 85.0 |
-| Neha | NaN | 78.0 |
-| NaN | 26.0 | NaN |
-
-### Final Cleaned & Normalized Dataset
-| Name | Age | Marks | Age_Normalized | Marks_Normalized |
-| :--- | :--- | :--- | :--- | :--- |
-| Amit | 22.0 | 85.0 | 0.000 | 0.583 |
-| Riya | 24.0 | 90.0 | 0.500 | 1.000 |
-| Neha | 23.5 | 78.0 | 0.375 | 0.000 |
-| Unknown | 26.0 | 84.5 | 1.000 | 0.542 |
-
----
-*Created as part of the Automated 7-Day College Data Engineering Series.*
