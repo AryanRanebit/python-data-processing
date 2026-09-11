@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+locations.csv
+cleaned_warehouse_profiles.csv
