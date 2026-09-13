@@ -1,0 +1,5 @@
+id,customer_name,account_balance,credit_score,updated_at
+1,Alice,1500.5,750,2026-09-01T10:00:00
+2,Bob,-50.0,680,2026-09-01T10:05:00
+3,CorruptedUser,2300.0,200,2026-09-01T10:10:00
+4,Diana,500.0,810,2026-09-01T10:15:00

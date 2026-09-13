@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+warehouse.db
+batch1_input.csv
+batch2_input.csv
+quarantine_invalid_records.csv
