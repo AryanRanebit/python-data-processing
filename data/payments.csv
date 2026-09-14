@@ -1,0 +1,5 @@
+payment_id,order_id,payment_method,payment_status
+501,1,Credit Card,COMPLETED
+502,2,PayPal,COMPLETED
+503,3,Credit Card,FAILED
+504,4,Debit Card,COMPLETED
