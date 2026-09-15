@@ -1,0 +1,7 @@
+transaction_id,category,region,amount,discount_pct
+1001,Electronics,North,12000.0,0.1
+1002,Clothing,South,,0.05
+1003,Electronics,North,4500.0,0.15
+1004,Home,West,3200.0,0.0
+1005,Clothing,South,1500.0,0.2
+1001,Electronics,North,12000.0,0.1
