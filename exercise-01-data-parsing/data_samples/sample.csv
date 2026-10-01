@@ -1,0 +1,6 @@
+student_id,name,age,grade,attendance_pct
+101,Alice Smith,20,A,95.5
+102,Bob Jones,,B,82.0
+103,Charlie Brown,22,,74.5
+104,Diana Prince,19,A,150.0
+105,Evan Wright,21,C,
