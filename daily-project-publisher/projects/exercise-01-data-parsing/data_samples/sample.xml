@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory>
+  <item id="SKU001">
+    <name>Wireless Mouse</name>
+    <price>25.99</price>
+    <stock>120</stock>
+  </item>
+  <item id="SKU002">
+    <name>Mechanical Keyboard</name>
+    <price>-45.00</price>
+    <stock>45</stock>
+  </item>
+  <item id="SKU003">
+    <name></name>
+    <price>199.99</price>
+    <stock>0</stock>
+  </item>
+  <item id="SKU004">
+    <name>Gaming Monitor</name>
+    <price>350.00</price>
+    <stock></stock>
+  </item>
+</inventory>

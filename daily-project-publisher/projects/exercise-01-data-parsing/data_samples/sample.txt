@@ -1,0 +1,6 @@
+# Student Records Batch A
+ID: 101 | Name: Alice Smith | Age: 20 | Score: 88.5
+ID: 102 | Name: Bob Jones | Age: -5 | Score: 92.0
+ID: 103 | Name:  | Age: 22 | Score: N/A
+ID: 104 | Name: Charlie Brown | Age: 19 | Score: 76.0
+ID: INVALID_ID | Name: Diana | Age: 21 | Score: 85.0
